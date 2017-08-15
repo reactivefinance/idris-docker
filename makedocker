@@ -1,1 +1,1 @@
-docker build -t reactivefinance/jupyterhub .
+docker build -t reactivefinance/idris .
