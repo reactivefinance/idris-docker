@@ -1,0 +1,4 @@
+#!/bin/sh
+. ./variables.sh
+docker build --build-arg VERSION=${VERSION} -t ${NAME} .
+docker tag ${NAME} ${IMAGE_NAME}
