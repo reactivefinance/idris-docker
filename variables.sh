@@ -1,5 +1,5 @@
-VERSION=1.1.1
+VERSION=1.2.0
 NAME=reactivefinance/idris
-TAG=v$VERSION
+TAG=$VERSION
 IMAGE_NAME=${NAME}:${TAG}
 DOCKER_ID_USER=phaener
