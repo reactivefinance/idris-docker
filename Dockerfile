@@ -15,5 +15,6 @@ FROM alpine:latest
 LABEL maintainer="Patrick Haener <contact@haenerconsulting.com>"
 WORKDIR /root/.cabal
 COPY --from=builder /root/.cabal .
+COPY --from=builder /usr/lib /usr/lib
 ENV PATH ${PATH}:/root/.cabal/bin
 CMD ["idris"]
