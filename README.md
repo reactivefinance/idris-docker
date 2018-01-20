@@ -20,6 +20,12 @@ Compile to executable:
 ./idris hello.idr -o hello
 ```
 
+Generating C code:
+
+```
+./idris hello.idr -S -o hello.c
+```
+
 Execute the binary then as follows:
 
 ```
@@ -31,18 +37,19 @@ Execute the binary then as follows:
 Compile to JavaScript for Node
 
 ```
-./idris-codegen-node hello.idr -o hello.js
+./idris --codegen javascript hello.idr -o hello
 ```
 
 Run in Node:
 
 ```
-node hello.js
+./hello
 ```
+
 #### JavaScript
 
 ```
-./idris-codegen-javascript hello.idr -o hello.js
+./idris --codegen javascript hello.idr -o hello.js
 ```	
 
 ### Markdown
