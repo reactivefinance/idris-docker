@@ -9,12 +9,19 @@ RUN apk add --no-cache \
   zlib-dev \
   ghc \
   cabal
-RUN cabal update && cabal install -f FFI -f LLVM -f GMP idris-${IDRIS_VERSION}
+RUN cabal update && cabal install -f FFI -f LLVM -f GMP idris-${IDRIS_VERSION} 
 
 FROM alpine:latest
 LABEL maintainer="Patrick Haener <contact@haenerconsulting.com>"
-WORKDIR /root/.cabal
-COPY --from=builder /root/.cabal .
-COPY --from=builder /usr/lib /usr/lib
+RUN apk add --no-cache \
+  gmp \
+  libffi \
+  ncurses \
+  musl \
+  zlib
+
+COPY --from=builder /root/.cabal/bin /root/.cabal/bin
+COPY --from=builder /root/.cabal/lib /root/.cabal/lib
+COPY --from=builder /root/.cabal/share /root/.cabal/share
 ENV PATH ${PATH}:/root/.cabal/bin
 CMD ["idris"]
