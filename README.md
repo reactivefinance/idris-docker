@@ -37,7 +37,7 @@ Execute the binary then as follows:
 Compile to JavaScript for Node
 
 ```
-./idris --codegen javascript hello.idr -o hello
+./idris --codegen node hello.idr -o hello
 ```
 
 Run in Node:
