@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run -it --rm -v ${PWD}:/home/idris reactivefinance/idris $@

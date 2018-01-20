@@ -14,12 +14,17 @@ RUN cabal update && cabal install -f FFI -f LLVM -f GMP idris-${IDRIS_VERSION}
 FROM alpine:latest
 LABEL maintainer="Patrick Haener <contact@haenerconsulting.com>"
 RUN apk add --no-cache \
-  gmp \
   libffi \
   ncurses \
   musl \
-  zlib
+  zlib \
+  musl-dev \
+  gmp-dev \
+  gcc
 
 COPY --from=builder /root/.cabal/bin /root/.cabal/bin
+COPY --from=builder /root/.cabal/share /root/.cabal/share
+VOLUME /home/idris
+WORKDIR /home/idris
 ENV PATH ${PATH}:/root/.cabal/bin
 CMD ["idris"]
