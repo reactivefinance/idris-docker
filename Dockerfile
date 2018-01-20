@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:latest as builder
 ARG VERSION
 ENV IDRIS_VERSION ${VERSION}
 RUN apk add --no-cache \
