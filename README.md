@@ -41,8 +41,9 @@ node hello.js
 ```
 #### JavaScript
 
+```
 ./idris-codegen-javascript hello.idr -o hello.js
-
+```	
 
 ### Markdown
 
