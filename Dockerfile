@@ -21,7 +21,5 @@ RUN apk add --no-cache \
   zlib
 
 COPY --from=builder /root/.cabal/bin /root/.cabal/bin
-COPY --from=builder /root/.cabal/lib /root/.cabal/lib
-COPY --from=builder /root/.cabal/share /root/.cabal/share
 ENV PATH ${PATH}:/root/.cabal/bin
 CMD ["idris"]
