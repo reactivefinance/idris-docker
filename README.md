@@ -1,6 +1,8 @@
-# Docker Image for Idris
+# Docker Image for Idris [![](https://images.microbadger.com/badges/version/reactivefinance/idris.svg)](https://microbadger.com/images/reactivefinance/idris "Get your own version badge on microbadger.com")
 
-[Alpine Linux](https://alpinelinux.org/) based image.
+[Alpine Linux](https://alpinelinux.org/) based docker image of [Idris](http://www.idris-lang.org).
+
+[![](https://images.microbadger.com/badges/image/reactivefinance/idris.svg)](https://microbadger.com/images/reactivefinance/idris "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/reactivefinance/idris.svg)](https://microbadger.com/images/reactivefinance/idris "Get your own commit badge on microbadger.com")
 
 ## Usage
 
@@ -59,3 +61,4 @@ The image also includes the `cheapskate` markdown to HTML transformer.
 ```
 ./cheapskate ./README.md
 ``` 
+
